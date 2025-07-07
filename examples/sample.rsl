@@ -1,8 +1,26 @@
 [INIT]
+    LMSG &ms0 Hello World!
+    LMSG &md0 Hello World!
+    SMSG #id Hello mate! Where are you?? Ok, done.
+
+    DMLT -25
+
+    BSET &bl0 FALSE
+
+    DMLT 25
+
     GRPS
     GOTO #ps
+    GOTO #nn
 
 [POSI]
     ; Keep going to random position.
     GRPS
     GOTO #ps
+
+[HELLO_WORLD]
+    LOG initializing robot...
+    LOG TICK
+    LOG BOTPOS
+    LOG HP
+    LOG HELLO

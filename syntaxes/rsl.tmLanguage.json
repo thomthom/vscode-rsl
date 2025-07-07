@@ -1,38 +1,127 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Robot Scripting Language",
+	"scopeName": "source.rsl",
 	"patterns": [
+		{
+			"include": "#events"
+		},
+		{
+			"include": "#subroutines"
+		},
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#properties"
+		},
+		{
+			"include": "#registers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
 		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#comments"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"events": {
 			"patterns": [
 				{
-					"name": "keyword.control.rsl",
-					"match": "\\b(if|while|for|return)\\b"
+					"name": "entity.name.function.rsl",
+					"match": "\\b(ATKD|ATXX|DLIM|DLOS|DPIK|DOLL|EAPP|HELP|INIT|MSGR|NEXT|POSI|RAPP|SEEP|SEEE|STEP|WALL)\\b]"
 				}
 			]
 		},
-		"strings": {
-			"name": "string.quoted.double.rsl",
-			"begin": "\"",
-			"end": "\"",
+		"properties": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.rsl",
-					"match": "\\\\."
+					"name": "entity.name.function.rsl",
+					"match": "\\b(ATPR|BHVR|DMLT)\\b"
+				}
+			]
+		},
+		"commands": {
+			"patterns": [
+				{
+					"name": "entity.name.function.rsl",
+					"match": "\\b(AAID|ATAK|CALL|ESCP|FRND|FLEE|FOLL|GOTO|HALT|IFBF|IFBT|IFEQ|IFFR|IFGT|IFHI|IFIN|IFLO|IFLT|IFNE|IFNF|IFNV|IFVA|IFVI|ISEQ|LMSG|LOG|SHOT|SMSG|SOS|TEST|TURN|VAL|VISI|WAIT)\\b"
+				},
+				{
+					"name": "variable.parameter.rsl",
+					"match": "\\b(HP|TICK|BOTPOS)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.rsl",
+					"match": "\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|CNAM|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRIDNEAR|QBHV|SNMY)\\b"
+				}
+			]
+		},
+		"subroutines": {
+			"patterns": [
+				{
+					"name": "entity.name.function.rsl",
+					"match": "\\[[A-Z]+\\]"
+				}
+			]
+		},
+		"registers": {
+			"patterns": [
+				{
+					"name": "variable.language.rsl",
+					"match": "[&](id|ps|bh|ms|nr|bl)[0-9]"
+				},
+				{
+					"name": "invalid.illegal.rsl",
+					"match": "[&]\\w+"
+				},
+				{
+					"name": "storage.type.var.rsl",
+					"match": "[#](me|mp|le|ri|fw|bk|mb|dl|id|ie|ps|bh|ms|nr|bl)"
+				},
+				{
+					"name": "invalid.illegal.rsl",
+					"match": "[#]\\w+"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.other.rsl",
+					"match": "\\b(TRUE|FALSE)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.rsl",
+					"match": "\\b\\d+\\b"
 				}
 			]
 		},
 		"comments": {
-			"name": "comment.line.rsl",
-			"match": ";.*$"
+			"patterns": [
+				{
+					"name": "comment.line.semicolon.rsl",
+					"match": ";.*$"
+				}
+			]
 		}
-	},
-	"scopeName": "source.rsl"
+	}
 }
