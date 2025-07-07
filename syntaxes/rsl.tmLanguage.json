@@ -29,6 +29,9 @@
 		},
 		{
 			"include": "#comments"
+		},
+		{
+			"include": "#messages"
 		}
 	],
 	"repository": {
@@ -63,7 +66,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(AAID|ATAK|CALL|ESCP|FRND|FLEE|FOLL|GOTO|HALT|IFBF|IFBT|IFEQ|IFFR|IFGT|IFHI|IFIN|IFLO|IFLT|IFNE|IFNF|IFNV|IFVA|IFVI|ISEQ|LMSG|LOG|SHOT|SMSG|SOS|TEST|TURN|VAL|VISI|WAIT)\\b"
+					"match": "\\b(AAID|ATAK|CALL|ESCP|FRND|FLEE|FOLL|GOTO|HALT|IFBF|IFBT|IFEQ|IFFR|IFGT|IFHI|IFIN|IFLO|IFLT|IFNE|IFNF|IFNV|IFVA|IFVI|ISEQ|LMSG|SHOT|SMSG|SOS|TEST|TURN|VAL|VISI|WAIT)\\b"
 				},
 				{
 					"name": "variable.parameter.rsl",
@@ -120,6 +123,25 @@
 				{
 					"name": "comment.line.semicolon.rsl",
 					"match": ";.*$"
+				}
+			]
+		},
+		"messages": {
+			"patterns": [
+				{
+					"name": "meta.log.statement.rsl",
+					"begin": "\\bLOG\\b\\s+",
+					"end": "$",
+					"patterns": [
+						{
+							"name": "constant.language.log-keyword.rsl",
+							"match": "\\b(TICK|BOTPOS|HP)\\b"
+						},
+						{
+							"name": "string.unquoted.message.rsl",
+							"match": ".+"
+						}
+					]
 				}
 			]
 		}
