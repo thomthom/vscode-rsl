@@ -66,7 +66,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(AAID|ATAK|CALL|ESCP|FRND|FLEE|FOLL|GOTO|HALT|IFBF|IFBT|IFEQ|IFFR|IFGT|IFHI|IFIN|IFLO|IFLT|IFNE|IFNF|IFNV|IFVA|IFVI|ISEQ|LMSG|SHOT|SMSG|SOS|TEST|TURN|VAL|VISI|WAIT)\\b"
+					"match": "\\b(AAID|ATAK|CALL|ESCP|FRND|FLEE|FOLL|GOTO|HALT|IFBF|IFBT|IFEQ|IFFR|IFGT|IFHI|IFIN|IFLO|IFLT|IFNE|IFNF|IFNV|IFVA|IFVI|ISEQ|SHOT|SOS|TEST|TURN|VAL|VISI|WAIT)\\b"
 				},
 				{
 					"name": "variable.parameter.rsl",
@@ -131,6 +131,11 @@
 				{
 					"name": "meta.log.statement.rsl",
 					"begin": "\\bLOG\\b\\s+",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.function.rsl"
+						}
+					},
 					"end": "$",
 					"patterns": [
 						{
@@ -139,7 +144,45 @@
 						},
 						{
 							"name": "string.unquoted.message.rsl",
-							"match": ".+"
+							"match": "(?!TICK|BOTPOS|HP).+"
+						}
+					]
+				},
+				{
+					"name": "meta.message.statement.lmsg.rsl",
+					"begin": "\\bLMSG\\b\\s+",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.function.rsl"
+						}
+					},
+					"end": "$",
+					"patterns": [
+						{
+							"include": "#registers"
+						},
+						{
+							"name": "string.unquoted.message.rsl",
+							"match": "[^\\s].*$"
+						}
+					]
+				},
+				{
+					"name": "meta.message.statement.smsg.rsl",
+					"begin": "\\bSMSG\\b\\s+",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.function.rsl"
+						}
+					},
+					"end": "$",
+					"patterns": [
+						{
+							"include": "#registers"
+						},
+						{
+							"name": "string.unquoted.message.rsl",
+							"match": "[^\\s].*$"
 						}
 					]
 				}
