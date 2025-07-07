@@ -7,9 +7,6 @@
 			"include": "#events"
 		},
 		{
-			"include": "#subroutines"
-		},
-		{
 			"include": "#commands"
 		},
 		{
@@ -38,8 +35,19 @@
 		"events": {
 			"patterns": [
 				{
-					"name": "entity.name.function.rsl",
-					"match": "\\b(ATKD|ATXX|DLIM|DLOS|DPIK|DOLL|EAPP|HELP|INIT|MSGR|NEXT|POSI|RAPP|SEEP|SEEE|STEP|WALL)\\b]"
+					"name": "meta.section.event.rsl",
+					"begin": "\\[",
+					"end": "\\]",
+					"patterns": [
+						{
+							"name": "entity.name.type.rsl",
+							"match": "\\b(ATKD|ATXX|DLIM|DLOS|DPIK|DOLL|EAPP|HELP|INIT|MSGR|NEXT|POSI|RAPP|SEEP|SEEE|STEP|WALL)\\b"
+						},
+						{
+							"name": "entity.name.section.rsl",
+							"match": "\\b[A-Z_][A-Z0-9_]*\\b"
+						}
+					]
 				}
 			]
 		},
@@ -68,14 +76,6 @@
 				{
 					"name": "entity.name.function.rsl",
 					"match": "\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|CNAM|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRIDNEAR|QBHV|SNMY)\\b"
-				}
-			]
-		},
-		"subroutines": {
-			"patterns": [
-				{
-					"name": "entity.name.function.rsl",
-					"match": "\\[[A-Z]+\\]"
 				}
 			]
 		},
