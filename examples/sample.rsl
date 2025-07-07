@@ -1,0 +1,8 @@
+[INIT]
+    GRPS
+    GOTO #ps
+
+[POSI]
+    ; Keep going to random position.
+    GRPS
+    GOTO #ps
