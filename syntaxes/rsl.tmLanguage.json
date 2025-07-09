@@ -44,7 +44,7 @@
 					"patterns": [
 						{
 							"name": "entity.name.type.rsl",
-							"match": "\\b(ATKD|ATXX|DLIM|DLOS|DPIK|DOLL|EAPP|HELP|INIT|MSGR|NEXT|POSI|RAPP|SEEP|SEEE|STEP|WALL)\\b"
+							"match": "\\b(AT\\d+|ATKD|ATXX|DLIM|DLOS|DPIK|DOLL|EAPP|HELP|INIT|MSGR|NEXT|POSI|RAPP|SEEP|SEEE|STEP|WALL)\\b"
 						},
 						{
 							"name": "entity.name.section.rsl",
@@ -78,7 +78,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|CNAM|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRIDNEAR|QBHV|SNMY)\\b"
+					"match": "\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|CNAM|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRID|NEAR|QBHV|SNMY)\\b"
 				}
 			]
 		},

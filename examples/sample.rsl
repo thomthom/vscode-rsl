@@ -1,4 +1,5 @@
 [INIT]
+    LRID #id 1
     LMSG &ms0 Hello World!
     LMSG &md0 Hello World!
     SMSG #id Hello mate! Where are you?? Ok, done.
@@ -24,3 +25,6 @@
     LOG BOTPOS
     LOG HP
     LOG HELLO
+
+[AT500]
+	BSET &bl0 TRUE
