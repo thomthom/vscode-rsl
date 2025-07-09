@@ -57,8 +57,28 @@
 		"properties": {
 			"patterns": [
 				{
+					"name": "meta.property.bhvr.rsl",
+					"begin": "\\bBHVR\\b\\s+",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.function.rsl"
+						}
+					},
+					"end": "$",
+					"patterns": [
+						{
+							"name": "constant.language.behavior.rsl",
+							"match": "\\b(scout|sniper|assassin|fighter|berserk)\\b"
+						},
+						{
+							"name": "invalid.illegal.behavior.rsl",
+							"match": "\\b(?!scout|sniper|assassin|fighter|berserk)[a-zA-Z_]+\\b"
+						}
+					]
+				},
+				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(ATPR|BHVR|DMLT)\\b"
+					"match": "\\b(ATPR|DMLT)\\b"
 				}
 			]
 		},

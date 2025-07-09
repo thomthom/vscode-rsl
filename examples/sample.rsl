@@ -8,6 +8,10 @@
 
     BSET &bl0 FALSE
 
+    BHVR scout
+    BHVR sniper
+    BHVR medic
+
     DMLT 25
 
     GRPS
