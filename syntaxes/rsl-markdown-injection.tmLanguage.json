@@ -1,0 +1,37 @@
+{
+	"name": "RSL in Markdown",
+	"scopeName": "markdown.rsl.codeblock",
+	"injectionSelector": "L:text.html.markdown",
+	"patterns": [
+		{
+			"begin": "(^|\\G)(\\s*)(```)(rsl)\\s*$",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.whitespace.codeblock.markdown"
+				},
+				"2": {
+					"name": "punctuation.whitespace.codeblock.markdown"
+				},
+				"3": {
+					"name": "punctuation.definition.markdown"
+				},
+				"4": {
+					"name": "fenced_code.block.language.rsl.markdown"
+				}
+			},
+			"end": "^\\s*```\\s*$",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.markdown"
+				}
+			},
+			"name": "fenced_code.block.rsl.markdown",
+			"contentName": "source.rsl",
+			"patterns": [
+				{
+					"include": "source.rsl"
+				}
+			]
+		}
+	]
+}

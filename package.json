@@ -10,16 +10,32 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "rsl",
-      "aliases": ["Robot Scripting Language", "rsl"],
-      "extensions": [".rsl"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "rsl",
-      "scopeName": "source.rsl",
-      "path": "./syntaxes/rsl.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "rsl",
+        "aliases": [
+          "Robot Scripting Language",
+          "rsl"
+        ],
+        "extensions": [
+          ".rsl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rsl",
+        "scopeName": "source.rsl",
+        "path": "./syntaxes/rsl.tmLanguage.json"
+      },
+      {
+        "scopeName": "markdown.rsl.codeblock",
+        "path": "./syntaxes/rsl-markdown-injection.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
+      }
+    ]
   }
 }
