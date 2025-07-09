@@ -77,8 +77,28 @@
 					]
 				},
 				{
+					"name": "meta.property.atpr.rsl",
+					"begin": "\\bATPR\\b\\s+",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.function.rsl"
+						}
+					},
+					"end": "$",
+					"patterns": [
+						{
+							"name": "constant.language.atpr.rsl",
+							"match": "\\b(weak|strong|close|far|lowhp|highhp|random)\\b"
+						},
+						{
+							"name": "invalid.illegal.atpr.rsl",
+							"match": "\\b(?!weak|strong|close|far|lowhp|highhp|random)[a-zA-Z_]+\\b"
+						}
+					]
+				},
+				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(ATPR|DMLT)\\b"
+					"match": "\\b(DMLT)\\b"
 				}
 			]
 		},
