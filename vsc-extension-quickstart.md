@@ -27,3 +27,15 @@
 
 * To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 * To share your extension with the world, read on https://code.visualstudio.com/api/working-with-extensions/publishing-extension about publishing an extension.
+
+```sh
+npm install -g vsce
+```
+
+```sh
+vsce package
+```
+
+```sh
+code --install-extension rsl-syntax-0.0.1.vsix
+```
