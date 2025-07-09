@@ -37,5 +37,5 @@ vsce package
 ```
 
 ```sh
-code --install-extension rsl-syntax-0.0.1.vsix
+code --install-extension rsl-0.0.1.vsix
 ```
