@@ -3,6 +3,7 @@
   "displayName": "RSL",
   "description": "Syntax highlighting for RSL (Robot Scripting Language)",
   "version": "0.0.1",
+  "publisher": "evil-software-empire",
   "repository": {
     "type": "git",
     "url": "https://github.com/thomthom/vscode-rsl"
