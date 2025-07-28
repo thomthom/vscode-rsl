@@ -9,6 +9,8 @@ Archived version can be found at the Internet Archive: https://web.archive.org/w
 
 This extension provides simple syntax highlighting for the RSL 1.2 format.
 
+It highlights `.rsl` files and code blocks marked as `rsl` in Markdown files.
+
 ![](docs/rsl-vscode.png)
 
 ## Release Notes
