@@ -1,6 +1,7 @@
 [INIT]
     LRID #id 1
     LMSG &ms0 Hello World!
+    ; Invalid register IDs are flagged as errors.
     LMSG &md0 Hello World!
     SMSG #id Hello mate! Where are you?? Ok, done.
 
@@ -13,6 +14,7 @@
     BHVR assassin
     BHVR fighter
     BHVR berserk
+    ; Invalid behavior types are flagged as errors.
     BHVR medic
 
     ATPR weak
@@ -43,4 +45,4 @@
     LOG HELLO
 
 [AT500]
-	BSET &bl0 TRUE
+    BSET &bl0 TRUE
