@@ -9,6 +9,8 @@ Archived version can be found at the Internet Archive: https://web.archive.org/w
 
 This extension provides simple syntax highlighting for the RSL 1.2 format.
 
+![](docs/rsl-vscode.png)
+
 ## Release Notes
 
 ### 0.0.1
