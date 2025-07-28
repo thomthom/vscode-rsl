@@ -9,7 +9,7 @@ Archived version can be found at the Internet Archive: https://web.archive.org/w
 
 This extension provides simple syntax highlighting for the RSL 1.2 format.
 
-![](https://raw.githubusercontent.com/thomthom/vscode-rsl/main/docs/rsl-vscode.png)
+![](docs/rsl-vscode.png)
 
 ## Release Notes
 
