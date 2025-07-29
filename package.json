@@ -2,7 +2,7 @@
   "name": "robot-scripting-language",
   "displayName": "RSL (Robot Scripting Language)",
   "description": "Syntax highlighting for RSL (Robot Scripting Language)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "evil-software-empire",
   "repository": {
     "type": "git",
