@@ -14,4 +14,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.0.2] - 2025-07-28
 
-- Initial release
+- Initial release of RSL syntax highlighting.
