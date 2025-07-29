@@ -2,15 +2,15 @@
     LRID #id 1
     LMSG &ms0 Hello World!
     ; Invalid register IDs are flagged as errors.
-    LMSG &md0 Hello World!
+    lmsg &md0 Hello World!
     SMSG #id Hello mate! Where are you?? Ok, done.
 
     DMLT -25
 
-    BSET &bl0 FALSE
+    BSET &bl0 false
 
     BHVR scout
-    BHVR sniper
+    BHVR SNIPER
     BHVR assassin
     BHVR fighter
     BHVR berserk
@@ -21,9 +21,9 @@
     ATPR strong
     ATPR close
     ATPR far
-    ATPR lowhp
+    atpr lowhp
     ATPR highhp
-    ATPR random
+    ATPR RANDOM
     ATPR monkey
 
     DMLT 25
@@ -32,17 +32,20 @@
     GOTO #ps
     GOTO #nn
 
-[POSI]
+[posi]
     ; Keep going to random position.
     GRPS
-    GOTO #ps
+    GOTO #PS
 
 [HELLO_WORLD]
     LOG initializing robot...
-    LOG TICK
-    LOG BOTPOS
+    log TICK
+    LOG botpos
     LOG HP
     LOG HELLO
 
 [AT500]
     BSET &bl0 TRUE
+
+[at42]
+    smsg #id Hello World!

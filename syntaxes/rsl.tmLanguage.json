@@ -44,11 +44,11 @@
 					"patterns": [
 						{
 							"name": "entity.name.type.rsl",
-							"match": "\\b(AT\\d+|ATKD|ATXX|DLIM|DLOS|DPIK|DOLL|EAPP|HELP|INIT|MSGR|NEXT|POSI|RAPP|SEEP|SEEE|STEP|WALL)\\b"
+							"match": "(?i)\\b(AT\\d+|ATKD|ATXX|DLIM|DLOS|DPIK|DOLL|EAPP|HELP|INIT|MSGR|NEXT|POSI|RAPP|SEEP|SEEE|STEP|WALL)\\b"
 						},
 						{
 							"name": "entity.name.section.rsl",
-							"match": "\\b[A-Z_][A-Z0-9_]*\\b"
+							"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
 						}
 					]
 				}
@@ -58,7 +58,7 @@
 			"patterns": [
 				{
 					"name": "meta.property.bhvr.rsl",
-					"begin": "\\bBHVR\\b\\s+",
+					"begin": "(?i)\\bBHVR\\b\\s+",
 					"beginCaptures": {
 						"0": {
 							"name": "entity.name.function.rsl"
@@ -68,17 +68,17 @@
 					"patterns": [
 						{
 							"name": "constant.language.behavior.rsl",
-							"match": "\\b(scout|sniper|assassin|fighter|berserk)\\b"
+							"match": "(?i)\\b(scout|sniper|assassin|fighter|berserk)\\b"
 						},
 						{
 							"name": "invalid.illegal.behavior.rsl",
-							"match": "\\b(?!scout|sniper|assassin|fighter|berserk)[a-zA-Z_]+\\b"
+							"match": "(?i)\\b(?!scout|sniper|assassin|fighter|berserk)[a-zA-Z_]+\\b"
 						}
 					]
 				},
 				{
 					"name": "meta.property.atpr.rsl",
-					"begin": "\\bATPR\\b\\s+",
+					"begin": "(?i)\\bATPR\\b\\s+",
 					"beginCaptures": {
 						"0": {
 							"name": "entity.name.function.rsl"
@@ -88,17 +88,17 @@
 					"patterns": [
 						{
 							"name": "constant.language.atpr.rsl",
-							"match": "\\b(weak|strong|close|far|lowhp|highhp|random)\\b"
+							"match": "(?i)\\b(weak|strong|close|far|lowhp|highhp|random)\\b"
 						},
 						{
 							"name": "invalid.illegal.atpr.rsl",
-							"match": "\\b(?!weak|strong|close|far|lowhp|highhp|random)[a-zA-Z_]+\\b"
+							"match": "(?i)\\b(?!weak|strong|close|far|lowhp|highhp|random)[a-zA-Z_]+\\b"
 						}
 					]
 				},
 				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(DMLT)\\b"
+					"match": "(?i)\\b(DMLT)\\b"
 				}
 			]
 		},
@@ -106,11 +106,11 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(AAID|ATAK|CALL|ESCP|FRND|FLEE|FOLL|GOTO|HALT|IFBF|IFBT|IFEQ|IFFR|IFGT|IFHI|IFIN|IFLO|IFLT|IFNE|IFNF|IFNV|IFVA|IFVI|ISEQ|SHOT|SOS|TEST|TURN|VAL|VISI|WAIT)\\b"
+					"match": "(?i)\\b(AAID|ATAK|CALL|ESCP|FRND|FLEE|FOLL|GOTO|HALT|IFBF|IFBT|IFEQ|IFFR|IFGT|IFHI|IFIN|IFLO|IFLT|IFNE|IFNF|IFNV|IFVA|IFVI|ISEQ|SHOT|SOS|TEST|TURN|VAL|VISI|WAIT)\\b"
 				},
 				{
 					"name": "variable.parameter.rsl",
-					"match": "\\b(HP|TICK|BOTPOS)\\b"
+					"match": "(?i)\\b(HP|TICK|BOTPOS)\\b"
 				}
 			]
 		},
@@ -118,7 +118,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.rsl",
-					"match": "\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|CNAM|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRID|NEAR|QBHV|SNMY)\\b"
+					"match": "(?i)\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|CNAM|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRID|NEAR|QBHV|SNMY)\\b"
 				}
 			]
 		},
@@ -126,7 +126,7 @@
 			"patterns": [
 				{
 					"name": "variable.language.rsl",
-					"match": "[&](id|ps|bh|ms|nr|bl)[0-9]"
+					"match": "(?i)[&](id|ps|bh|ms|nr|bl)[0-9]"
 				},
 				{
 					"name": "invalid.illegal.rsl",
@@ -134,7 +134,7 @@
 				},
 				{
 					"name": "storage.type.var.rsl",
-					"match": "[#](me|mp|le|ri|fw|bk|mb|dl|id|ie|ps|bh|ms|nr|bl)"
+					"match": "(?i)[#](me|mp|le|ri|fw|bk|mb|dl|id|ie|ps|bh|ms|nr|bl)"
 				},
 				{
 					"name": "invalid.illegal.rsl",
@@ -146,7 +146,7 @@
 			"patterns": [
 				{
 					"name": "keyword.other.rsl",
-					"match": "\\b(TRUE|FALSE)\\b"
+					"match": "(?i)\\b(TRUE|FALSE)\\b"
 				}
 			]
 		},
@@ -170,7 +170,7 @@
 			"patterns": [
 				{
 					"name": "meta.log.statement.rsl",
-					"begin": "\\bLOG\\b\\s+",
+					"begin": "(?i)\\bLOG\\b\\s+",
 					"beginCaptures": {
 						"0": {
 							"name": "entity.name.function.rsl"
@@ -180,17 +180,17 @@
 					"patterns": [
 						{
 							"name": "constant.language.log-keyword.rsl",
-							"match": "\\b(TICK|BOTPOS|HP)\\b"
+							"match": "(?i)\\b(TICK|BOTPOS|HP)\\b"
 						},
 						{
 							"name": "string.unquoted.message.rsl",
-							"match": "(?!TICK|BOTPOS|HP).+"
+							"match": "(?i)(?!TICK|BOTPOS|HP).+"
 						}
 					]
 				},
 				{
 					"name": "meta.message.statement.lmsg.rsl",
-					"begin": "\\bLMSG\\b\\s+",
+					"begin": "(?i)\\bLMSG\\b\\s+",
 					"beginCaptures": {
 						"0": {
 							"name": "entity.name.function.rsl"
@@ -209,7 +209,7 @@
 				},
 				{
 					"name": "meta.message.statement.smsg.rsl",
-					"begin": "\\bSMSG\\b\\s+",
+					"begin": "(?i)\\bSMSG\\b\\s+",
 					"beginCaptures": {
 						"0": {
 							"name": "entity.name.function.rsl"
