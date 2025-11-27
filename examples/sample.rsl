@@ -4,6 +4,7 @@
     ; Invalid register IDs are flagged as errors.
     lmsg &md0 Hello World!
     SMSG #id Hello mate! Where are you?? Ok, done.
+    CNAM MyRobotName
 
     DMLT -25
 

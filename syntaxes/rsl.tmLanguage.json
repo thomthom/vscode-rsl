@@ -118,7 +118,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.rsl",
-					"match": "(?i)\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|CNAM|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRID|NEAR|QBHV|SNMY)\\b"
+					"match": "(?i)\\b(_ADD|_DIV|_MUL|_SET|_SUB|ALLY|BSET|COPY|CPID|CPOS|GATR|GDIS|GPOS|GRPS|INVA|LSMG|LRID|NEAR|QBHV|SNMY)\\b"
 				}
 			]
 		},
@@ -168,6 +168,22 @@
 		},
 		"messages": {
 			"patterns": [
+				{
+					"name": "meta.cnam.statement.rsl",
+					"begin": "(?i)\\bCNAM\\b\\s+",
+					"beginCaptures": {
+						"0": {
+							"name": "entity.name.function.rsl"
+						}
+					},
+					"end": "$",
+					"patterns": [
+						{
+							"name": "string.unquoted.message.rsl",
+							"match": "[^\\s].*$"
+						}
+					]
+				},
 				{
 					"name": "meta.log.statement.rsl",
 					"begin": "(?i)\\bLOG\\b\\s+",
