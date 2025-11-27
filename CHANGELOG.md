@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.4] - 2025-11-27
+
+### Improved
+
+- Anything after `CNAM` is now highlighted as a string.
+
 ## [0.0.3] - 2025-07-29
 
 ### Fixed
